@@ -9,6 +9,7 @@ body{
 
 main{
     width: 600px;
+    max-width: 80vw;
     margin: auto;
     padding:16px;
 }
@@ -25,6 +26,7 @@ header {
     min-height: 60vh;
     color:white;
     gap:32px;
+    border-radius: 8px;
 }
 
 header > h1 {
@@ -37,7 +39,7 @@ header > img {
 }
 
 img{
-    max-width: 600px;
+    max-width: 80vw;
     border-radius: 8px;
 }
 
@@ -46,6 +48,8 @@ a{
 }
 
 #why{
+    margin-top:16px;
+    border-radius: 8px;
     width:100%;
     font-size: 24px;
     display: flex;
@@ -94,6 +98,7 @@ code{
     background-color: rgb(17, 17, 17);
     padding:48px;
     gap:32px;
+    border-radius: 8px;
 }
 
 #modular-programs, #libraries{
@@ -118,4 +123,12 @@ code{
     padding:16px;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.322);
+}
+
+
+@media screen and (max-width: 700px){
+    header, #roadmap, #modular-programs-cat, #libraries-cat{
+        flex-direction: column;
+    }
+
 }
