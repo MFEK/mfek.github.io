@@ -1,58 +1,114 @@
-<h1 id="modular-font-editor-k">Modular Font Editor K</h1>
-<p><img src="https://raw.githubusercontent.com/MFEK/docs/master/blob/logo.png" width="250"></p>
-<p><strong>Modular Font Editor K</strong> (MFEK) is an open source (Apache 2.0 licensed) modular font editor. It attempts to apply the Unix adage that each program should do one thing and do it well to a GUI font editor.</p>
-<p>MFEK is still very alpha, and many parts are missing (including a good website!). You can help!</p>
-<p><strong><a href="https://github.com/MFEK/docs/blob/master/doc/Why.md">Why MFEK?</a></strong></p>
-<p>To pull all modules, why not use this script?</p>
-<pre><code>/<span class="hljs-keyword">bin/bash </span>-c <span class="hljs-string">"$(curl -fsSL https://raw.githubusercontent.com/MFEK/docs/master/blob/pull_all_modules.sh)"</span>
-</code></pre><p>To see who wrote an MFEK module, check its <code>AUTHORS</code> file. The two main authors of MFEK are Fredrick R. Brennan (@ctrlcctrlv) and Matthew Blanchard (@MatthewBlanchard).</p>
-<h2 id="current-roadmap-as-of-2021-11-02">Current roadmap as of 2021-11-02</h2>
-<p><img src="https://raw.githubusercontent.com/MFEK/docs/master/roadmap/roadmap.png" alt="Current roadmap as of 2021-11-02"></p>
-<h3 id="roadmap-key">Roadmap key</h3>
-<ul>
-<li>Dotted line around module name — module not started.</li>
-<li>Dashed line around module name — module started, yet far from completion.</li>
-<li>No line around module name — module is still far from being begun, and may indeed be unnecessary and never be begun.</li>
-<li>A bold black arrow represents a program calling a program.</li>
-<li>A red arrow represents a program including a library.</li>
-<li>A black arrow represents a library including a library.</li>
-<li>All libraries and programs are assumed to be in Rust unless noted otherwise.</li>
-</ul>
-<h2 id="modular-programs">Modular programs</h2>
-<ul>
-<li><a href="https://github.com/MFEK/glif"><code>MFEKglif</code></a> (.glif editor w/planned Spiro support)</li>
-<li><a href="https://github.com/MFEK/stroke"><code>MFEKstroke</code></a> (applies different kinds of strokes to .glif files with open contours)</li>
-<li><a href="https://github.com/MFEK/metadata"><code>MFEKmetadata</code></a> (UFO metadata querier)</li>
-<li><a href="https://github.com/MFEK/about"><code>MFEKabout</code></a> (MFEK&#39;s about screen)</li>
-</ul>
-<h3 id="planned">Planned</h3>
-<ul>
-<li><code>MFEKufo</code> (a launcher for MFEKglif that displays all glyphs)</li>
-<li><code>MFEKdesignspace</code> (design space XML creator/editor)</li>
-<li><code>MFEKtransform</code> (transform, skew glyphs w/CLI options / GUI)</li>
-<li><code>MFEKinterpolate</code> (an interpolation confirmer / tester)</li>
-<li><code>MFEKmetrics</code> (load UFO file into HarfBuzz and output typed text, edit horizontal/vertical kerning and bearings)</li>
-<li><code>MFEKopentype</code> (OpenType layout editor based on @simoncozens&#39; ideas)</li>
-<li><code>MFEKexport</code> (frontend to fontmake)</li>
-</ul>
-<h4 id="far-off">Far off</h4>
-<ul>
-<li><code>MFEKpshints</code> (Add PostScript hints to glyphs and test them)</li>
-<li><code>MFEKtruetype</code> (basically would be an open source version of Visual TrueType (VTT))</li>
-</ul>
-<h2 id="libraries">Libraries</h2>
-<ul>
-<li><a href="https://github.com/MFEK/glifparser.rlib"><code>glifparser.rlib</code></a> (a .glif parser)<ul>
-<li><a href="https://github.com/MFEK/integer_or_float.rlib"><code>integer-or-float.rlib</code></a> (implements a .glif data type)</li>
-<li><sub><sup>(We need this because Norad has no support for <code>&lt;lib&gt;</code> in <code>.glif</code> files, and due to how they went about implementing Norad, fixing that is trickier than having my own glyph parser. Furthermore, as I plan to support Spiro, B-Splines, etc., through UFO format extensions, I should have one anyway.)</sup></sub></li>
-</ul>
-</li>
-<li><a href="https://github.com/MFEK/icu-data.rlib"><code>icu-data.rlib</code></a> (Unicode ICU data without C libicu, currently only encodings)</li>
-<li><a href="https://github.com/MFEK/ipc.rlib"><code>ipc.rlib</code></a> (<em>very</em> basic inter-process communication functions)</li>
-<li><a href="https://github.com/MFEK/math.rlib"><code>math.rlib</code></a> (implements algorithms for MFEKstroke: Pattern-Along-Path, Variable/Constant Width Stroke, etc.)</li>
-</ul>
-<h3 id="planned">Planned</h3>
-<ul>
-<li>libskef (Port of @skef&#39;s &laquo;Expand Stroke&raquo; feature to a reusable C API. Will likely also require <code>SplineSet</code> type from FontForge.)</li>
-<li>spiro-rs (Port of libspiro to Rust, probably will be done via <code>bindgen</code>)</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <title>modular font editor k</title>
+</head>
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/MFEK/docs/master/blob/logo.png" width="250">
+        <div>
+            <h1 id="modular-font-editor-k">Modular <nobr>Font Editor K</nobr></h1>
+            <p><strong>Modular Font Editor K</strong> (MFEK) is an open source (Apache 2.0 licensed) modular font editor. It attempts to apply the Unix adage that each program should do one thing and do it well to a GUI font editor.</p>
+            <p>MFEK is still very alpha, and many parts are missing (including a good website!). You can help!</p>
+        </div>
+    </header> 
+    <div id="why">
+        <h2>Why MFEK?</h2>
+        <strong><a href="https://github.com/MFEK/docs/blob/master/doc/Why.md"><button>click here for the full article</button></a></strong></button>
+    </div>
+    <main>
+        <p>To pull all modules, why not use this script?</p>
+        <div id="script">
+            <code>
+                /<span class="hljs-keyword">bin/bash </span>-c <span class="hljs-string">"$(curl -fsSL https://raw.githubusercontent.com/MFEK/docs/master/blob/pull_all_modules.sh)"</span>
+            </code>
+        </div>
+        <p>To see who wrote an MFEK module, check its <code>AUTHORS</code> file. The two main authors of MFEK are Fredrick R. Brennan (@ctrlcctrlv) and Matthew Blanchard (@MatthewBlanchard).</p>
+    </main>     
+    <div id="roadmap"> 
+        <div></div> 
+        <div>
+            <h2 id="current-roadmap-as-of-2021-11-02">Current roadmap as of 2021-11-02</h2>
+            <h3 id="roadmap-key">Roadmap key</h3>
+            <ul>
+            <li>Dotted line around module name — module not started.</li>
+            <li>Dashed line around module name — module started, yet far from completion.</li>
+            <li>No line around module name — module is still far from being begun, and may indeed be unnecessary and never be begun.</li>
+            <li>A bold black arrow represents a program calling a program.</li>
+            <li>A red arrow represents a program including a library.</li>
+            <li>A black arrow represents a library including a library.</li>
+            <li>All libraries and programs are assumed to be in Rust unless noted otherwise.</li>
+            </ul>
+        </div>
+        <a href="https://raw.githubusercontent.com/MFEK/docs/master/roadmap/roadmap.png"><img src="https://raw.githubusercontent.com/MFEK/docs/master/roadmap/roadmap.png" alt="Current roadmap as of 2021-11-02"></a>
+    </div>
+
+    <div id="modular-programs">
+        <h2 >Modular programs</h2>
+        <div id="modular-programs-cat">
+            <div>
+                <h3>In development</h3>
+                <ul>
+                <li><a href="https://github.com/MFEK/glif"><code>MFEKglif</code></a> (.glif editor w/planned Spiro support)</li>
+                <li><a href="https://github.com/MFEK/stroke"><code>MFEKstroke</code></a> (applies different kinds of strokes to .glif files with open contours)</li>
+                <li><a href="https://github.com/MFEK/metadata"><code>MFEKmetadata</code></a> (UFO metadata querier)</li>
+                <li><a href="https://github.com/MFEK/about"><code>MFEKabout</code></a> (MFEK&#39;s about screen)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Planned</h3>
+                <ul>
+                <li><code>MFEKufo</code> (a launcher for MFEKglif that displays all glyphs)</li>
+                <li><code>MFEKdesignspace</code> (design space XML creator/editor)</li>
+                <li><code>MFEKtransform</code> (transform, skew glyphs w/CLI options / GUI)</li>
+                <li><code>MFEKinterpolate</code> (an interpolation confirmer / tester)</li>
+                <li><code>MFEKmetrics</code> (load UFO file into HarfBuzz and output typed text, edit horizontal/vertical kerning and bearings)</li>
+                <li><code>MFEKopentype</code> (OpenType layout editor based on @simoncozens&#39; ideas)</li>
+                <li><code>MFEKexport</code> (frontend to fontmake)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Far off</h3>
+                <ul>
+                <li><code>MFEKpshints</code> (Add PostScript hints to glyphs and test them)</li>
+                <li><code>MFEKtruetype</code> (basically would be an open source version of Visual TrueType (VTT))</li>
+                </ul>
+            </div> 
+        </div>
+    </div>
+
+    <div id="libraries">
+        <h2 >Libraries</h2>
+        <div id="libraries-cat">
+            <div>
+                <h3>In development</h3>
+                <ul>
+                <li><a href="https://github.com/MFEK/glifparser.rlib"><code>glifparser.rlib</code></a> (a .glif parser)<ul>
+                <li><a href="https://github.com/MFEK/integer_or_float.rlib"><code>integer-or-float.rlib</code></a> (implements a .glif data type)</li>
+                <li><sub><sup>(We need this because Norad has no support for <code>&lt;lib&gt;</code> in <code>.glif</code> files, and due to how they went about implementing Norad, fixing that is trickier than having my own glyph parser. Furthermore, as I plan to support Spiro, B-Splines, etc., through UFO format extensions, I should have one anyway.)</sup></sub></li>
+                </ul>
+                </li>
+                <li><a href="https://github.com/MFEK/icu-data.rlib"><code>icu-data.rlib</code></a> (Unicode ICU data without C libicu, currently only encodings)</li>
+                <li><a href="https://github.com/MFEK/ipc.rlib"><code>ipc.rlib</code></a> (<em>very</em> basic inter-process communication functions)</li>
+                <li><a href="https://github.com/MFEK/math.rlib"><code>math.rlib</code></a> (implements algorithms for MFEKstroke: Pattern-Along-Path, Variable/Constant Width Stroke, etc.)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Planned</h3>
+                <ul>
+                <li>libskef (Port of @skef&#39;s &laquo;Expand Stroke&raquo; feature to a reusable C API. Will likely also require <code>SplineSet</code> type from FontForge.)</li>
+                <li>spiro-rs (Port of libspiro to Rust, probably will be done via <code>bindgen</code>)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
