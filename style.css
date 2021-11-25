@@ -36,15 +36,18 @@ header > h1 {
 }
 header > img {
     border:solid white 2px; 
+    width:200px;
 }
 
 img{
+    width:600px;
     max-width: 80vw;
     border-radius: 8px;
 }
 
 a{
     text-decoration: none;
+    color:rgb(241, 214, 154);
 }
 
 #why{
@@ -90,6 +93,7 @@ code{
     background-color: rgb(19, 19, 20);
     padding:4px;
     border-radius: 4px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 #roadmap{
