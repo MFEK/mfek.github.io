@@ -1,0 +1,33 @@
+@font-face {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-display: swap;
+  src:
+  url('../blob/fonts/vf/RobotoMono[wght].woff2') format('woff2'),
+  url('../blob/fonts/vf/RobotoMono[wght].woff') format('woff'),
+  url('../blob/fonts/vf/RobotoMono[wght].ttf') format('ttf');
+}
+
+@font-face {
+  font-family: Roboto Serif;
+  font-style: normal;
+  font-display: swap;
+  font-variation-settings: 'opsz' 12;
+  font-stretch: condensed;
+  src:
+  url('../blob/fonts/vf/RobotoSerif[GRAD,opsz,wdth,wght].woff2') format('woff2'),
+  url('../blob/fonts/vf/RobotoSerif[GRAD,opsz,wdth,wght].ttf') format('ttf'),
+  url('../blob/fonts/vf/RobotoSerif[GRAD,opsz,wdth,wght].woff') format('woff');
+}
+
+@font-face {
+  font-family: Roboto Serif;
+  font-style: italic;
+  font-display: swap;
+  font-variation-settings: 'opsz' 12;
+  font-stretch: condensed;
+  src: 
+  url('../blob/fonts/vf/RobotoSerif-Italic[GRAD,opsz,wdth,wght].woff2') format('woff2'),
+  url('../blob/fonts/vf/RobotoSerif-Italic[GRAD,opsz,wdth,wght].woff') format('woff'),
+  url('../blob/fonts/vf/RobotoSerif-Italic[GRAD,opsz,wdth,wght].ttf') format('ttf');
+}
