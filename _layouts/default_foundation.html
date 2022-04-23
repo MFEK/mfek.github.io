@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{%- if page.title -%}{{page.title}} | {%- endif -%}{{site.title}}</title>
+        {% include foundation_head.html %}
+    </head>
+    <body>
+        {{content}}
+    <div style="height:500px"></div>
+    {%- if page.no_fred == null -%}
+    {% include footer_fred.html %}
+    {%- endif -%}
+    {%- if page.no_lup == null -%}
+    <footer id="lup">
+        <p>Last updated: {{page.last_modified_at}}</p>
+    </footer>
+    {%- endif -%}
+    </body>
+</html>

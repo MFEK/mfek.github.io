@@ -1,0 +1,58 @@
+body {
+    font-family: "Roboto Serif";
+    font-variant-numeric: proportional-nums;
+}
+.TBD::after {content: 'TBD';}
+ol {
+    list-style: none;
+    counter-reset: grants -1;
+}
+ol li {
+    counter-increment: grants;
+    padding: 0em 0em 0em 0.5em;
+}
+ol li::marker {
+    content: counter(grants) ")";
+}
+.TBD::marker {
+    content: counter(grants) '+)';
+    color: maroon;
+}
+.bounty::marker {
+    content: 'ᵇ' counter(grants) ')';
+        title: 'test';
+}
+sc {
+    font-variant: small-caps;
+}
+.whereas {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+h1, h2, h3, h4, h5 {
+    font-variation-settings: 'wdth' 140;
+}
+footer {
+    font-size: x-small;
+}
+footer#fredf {
+    width: 150px;
+    border: 1px solid black;
+    padding: 10px;
+    float: right;
+}
+footer#lup {
+    clear: both;
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.0), (min-device-pixel-ratio: 1.0), (-webkit-min-device-pixel-ratio: 1.0) {
+    #fred {
+        background: url('../media/fred💸.webp');
+        background-size: cover;
+    }
+}
+@media only screen and (max--moz-device-pixel-ratio: 1.0), (max-device-pixel-ratio: 1.0), (-webkit-max-device-pixel-ratio: 1.0) {
+    #fred {
+        background: url('../media/fred💸150.webp');
+        background-size: cover;
+    }
+}

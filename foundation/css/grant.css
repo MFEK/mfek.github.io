@@ -1,0 +1,55 @@
+article {
+    margin:    0 auto;
+    max-width: 600px;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+h0 {
+    font-weight: bold;
+    font-size: 2em;
+    text-align:center;
+    display: block;
+    border-bottom: 10px solid black;
+    border-top: 10px solid black;
+}
+
+h0 {
+    font-variation-settings: 'wdth' 140, 'wght' 1000;
+    text-transform: uppercase;
+    margin: 0.33em 0 0.33em 0;
+}
+
+h1 {
+    font-variation-settings: 'wdth' 80;
+}
+
+h2,h3,h4,h5 {
+    font-variation-settings: 'wdth' 50;
+}
+
+h1,h2,h3,h4,h5 {
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
+}
+
+.post-header-flex {
+    display: flex;
+}
+
+.post-header-flex p {
+    margin: 0.2em;
+}
+
+p.post-meta {
+    flex: 1;
+    flex-basis: fit-content;
+    text-align: right;
+    font-variation-settings: 'wdth' 10;
+}
+
+h1.post-title {
+    flex: 3;
+    flex-basis: max-content;
+}

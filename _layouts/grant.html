@@ -1,0 +1,32 @@
+---
+layout: default_foundation
+title_pre: "Grant:"
+date_format: "%Y"
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <div class="post-header-flex">
+    <p class="post-title p-name" itemprop="name headline"><span class="title_pre">{{layout.title_pre | escape}}</span>&nbsp;{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      {%- assign xml_date = page.date | date_to_xmlschema -%}
+      {%- assign abbr_date = page.date | date: "%m/%d/%Y %H:%M:%S %Z" -%}
+      {%- assign date_format = layout.date_format | default: "%b %-d, %Y" -%}
+      <abbr title="Revision {{page.rev}}">№{{page.year_id}}</abbr>&nbsp;of&nbsp;<abbr title="{{ abbr_date }}"><time class="dt-published" datetime="{{ xml_date }}" itemprop="datePublished">{{ page.date | date: date_format }}</time></abbr>
+      {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}</p>
+      </div>
+      <h0>Draft Invitation to Bid</h0>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
