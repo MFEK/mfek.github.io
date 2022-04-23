@@ -53,3 +53,11 @@ h1.post-title {
     flex: 3;
     flex-basis: max-content;
 }
+
+.signature {
+text-align: right;
+}
+.signature-inner {
+display: inline-flex;
+align-items: last baseline;
+}

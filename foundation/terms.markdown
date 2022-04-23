@@ -17,4 +17,6 @@ If it is particularly difficult to fill a bid, we may hire a project manager to 
 
 We may also advertise our bid invitations. Typically, the longer it takes to fill, the more we will advertise.
 
-All of our grants that have invitations to bid attached include a list of features that the software must have for the Foundation to consider the grant complete. Please email if
+All of our grants that have invitations to bid attached include a list of features that the software must have for the Foundation to consider the grant complete. Please email if there is any confusion.
+
+While we work to set up email service for this domain, please send bids to [copypaste@kittens.ph](mailto:"Fredrick Brennan" <copypaste@kittens.ph>?subject=[MFEK bid] Bid on № X of YYYY). Please at least attach a description of your relevant experience, your bid total, your full legal name, your country of residence, a corporate identity if you wish us to pay one, your preferred method of communication among this list: email; Twitter; and Discord, and the method by which you wish to be paid.

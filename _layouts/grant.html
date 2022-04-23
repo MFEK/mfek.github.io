@@ -17,7 +17,7 @@ date_format: "%Y"
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
       </div>
-      <h0>Draft Invitation to Bid</h0>
+      <h0>{%-if page.draft-%}Draft {%endif%}Invitation to Bid</h0>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
