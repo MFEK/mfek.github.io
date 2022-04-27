@@ -1,0 +1,13 @@
+<script type="text/javascript" src="/blob/js/fetch/fetch.umd.min.js"></script>
+<script type="text/javascript">
+  window.GitHubAPICall = {
+    owner: "{{ site.github.owner_name }}",
+    repo: "{{ site.github.repository_name }}",
+    path: "{{ page.path }}"
+  };
+  window.GitHubJekyllLastModifiedEl = document.getElementById("last-modified");
+</script>
+<script type="text/javascript" src="/blob/js/github-jekyll-last-modified.js"></script>
+<script type="text/javascript">
+  modifiedDateJekyllGitHubAPI();
+</script>
