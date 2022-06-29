@@ -2,34 +2,75 @@ body {
     font-family: "Roboto Serif";
     font-variant-numeric: proportional-nums;
 }
-.TBD::after {content: 'TBD';}
 ol {
     list-style: none;
-    counter-reset: grants -1;
+    counter-reset: grants 0;
 }
 ol li {
     counter-increment: grants;
     padding: 0em 0em 0em 0.5em;
 }
-ol li::marker {
-    content: counter(grants) ")";
+marker {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    grid-column: 2;
+    display: inline;
 }
-.TBD::marker {
-    content: counter(grants) '+)';
+marker::before {
+    content: counter(grants);
+}
+marker::after {
+    content: ')';
+}
+.TBD {
     color: maroon;
 }
-.bounty::marker {
-    content: 'ᵇ' counter(grants) ')';
-        title: 'test';
+.TBD::after {
+    content: '+)';
+    color: maroon;
 }
-sc {
+.li_inner {
+}
+bounty {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    grid-column: 1;
+}
+bounty::before {
+    text-align: right;
+    display: inline;
+    content: 'ᵇ';
+}
+strong, .strong {
+    font-weight: bold;
+}
+sc, .sc {
     font-variant: small-caps;
 }
 .whereas {
     font-variant: small-caps;
     font-weight: bold;
 }
-h1, h2, h3, h4, h5 {
+numero::before {
+    content: "№ ";
+}
+char::before {
+    content: "｢ ";
+}
+char::after {
+    content: " ｣";
+}
+char::before, char::after {
+    color: #aaa;
+}
+bux {
+    font-size: 0.8em;
+    color: ForestGreen;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+h1, h2, h3, h4, h5, bux {
     font-variation-settings: 'wdth' 140;
 }
 footer {
@@ -43,6 +84,44 @@ footer#fredf {
 }
 footer#lup {
     clear: both;
+}
+ol.spaced_out > li {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+ol.spaced_out {
+    display: grid;
+    grid-template-columns: min-content min-content 1fr;
+}
+
+ol.spaced_out > li {
+    grid-column: 3;
+}
+ol > li::before {
+    min-width: 2em;
+    padding-right: 1em;
+}
+ol.spaced_out > li::before {
+}
+.li_inner {
+}
+div.series-end {
+    max-width: 500px;
+    margin-left: 0;
+    border-bottom: 1.5em solid black;
+    display:flex;
+    flex-direction: column;
+}
+div.series-end>span {
+    letter-spacing: .9rem;
+    position: relative;
+    top:1.3333em;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);
+    flex-basis: content;
+    background-clip: text;
+    color: rgba(0,0,0,0);
+    font-size: 1em;
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.0), (min-device-pixel-ratio: 1.0), (-webkit-min-device-pixel-ratio: 1.0) {
     #fred {

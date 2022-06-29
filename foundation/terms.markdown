@@ -7,13 +7,13 @@ Thank you for your interest in bidding on a grant offered by the MFEK Foundation
 
 ### TL;DR: How to bid
 
-Please send bids to [grants@mfek.org](mailto:grants@mfek.org?subject=[MFEK bid] Bid on № X of YYYY). Please at least attach a description of your relevant experience, your bid total, your full legal name, your country of residence, a corporate identity if you wish us to pay one, your preferred method of communication among this list: email; Twitter; and Discord, and the method by which you wish to be paid.
+Please send bids to [grants@mfek.org](mailto:grants@mfek.org?subject=[MFEK bid] Bid on <numero>X</numero> of YYYY). Please at least attach a description of your relevant experience, your bid total, your full legal name, your country of residence, a corporate identity if you wish us to pay one, your preferred method of communication among this list: email; Twitter; and Discord, and the method by which you wish to be paid.
 
 Full terms follow:
 
 # Definitions
 
-1. The "Foundation" refers to the Modular Font Editor K Foundation, Inc., a New Jersey Non-Profit Corporation, registration № 0450797197. It is governed by the laws of Atlantic City, New Jersey, in the United States of America.
+1. The "Foundation" refers to the Modular Font Editor K Foundation, Inc., a New Jersey Non-Profit Corporation, registration <numero>0450797197</numero>. It is governed by the laws of Atlantic City, New Jersey, in the United States of America.
 2. "Awardee" refers to any recipient of payments from the Foundation.
 3. "Grants" refer to written, digitally signed (GnuPG-signed) offers of payment by the Foundation to a specific Awardee or, in rare instances, multiple Awardees, if clearly stipulated in the Grant.
 4. "Bids" refer to messages from possible Awardees expressing their intent to fulfill a grant offered by the Foundation.
@@ -50,7 +50,7 @@ All of our grants that have invitations to bid attached include a list of featur
 
 # Bid process
 
-Bids must be sent either to [grants@mfek.org](mailto:"Modular Font Editor K Foundation, Inc. (Grants department)" <grants@mfek.org>?subject=[MFEK bid] Bid on № X of YYYY) or to [copypaste@kittens.ph](mailto:"Fredrick Brennan" <copypaste@kittens.ph>?subject=[MFEK bid] Bid on № X of YYYY) (deprecated, please use other email unless error received). Please at least attach a description of your relevant experience, your bid total, your full legal name, your country of residence, a corporate identity if you wish us to pay one, your preferred method of communication among this list: email; Twitter; and Discord, and the method by which you wish to be paid.
+Bids must be sent either to [grants@mfek.org](mailto:"Modular Font Editor K Foundation, Inc. (Grants department)" <grants@mfek.org>?subject=[MFEK bid] Bid on <numero>X</numero> of YYYY) or to [copypaste@kittens.ph](mailto:"Fredrick Brennan" <copypaste@kittens.ph>?subject=[MFEK bid] Bid on <numero>X</numero> of YYYY) (deprecated, please use other email unless error received). Please at least attach a description of your relevant experience, your bid total, your full legal name, your country of residence, a corporate identity if you wish us to pay one, your preferred method of communication among this list: email; Twitter; and Discord, and the method by which you wish to be paid.
 
 # Bid licensing
 
