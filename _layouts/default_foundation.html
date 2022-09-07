@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>{%- if page.title -%}{{page.title}} | {%- endif -%}{{site.title}}</title>
     {% include foundation_head.html %}
   </head>
   <body>
+    <div class="content">
     {{content}}
+    </div>
     <div style="height:500px"></div>
     {%- if page.no_fred == null -%}
       {% include footer_fred.html %}

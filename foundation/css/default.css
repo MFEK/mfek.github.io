@@ -2,6 +2,12 @@ body {
     font-family: "Roboto Serif";
     font-variant-numeric: proportional-nums;
 }
+.content {
+    max-width:600px;
+    text-align: justify;
+    text-justify: auto;
+    hyphens: auto;
+}
 ol {
     list-style: none;
     counter-reset: grants 0;
@@ -9,6 +15,7 @@ ol {
 ol li {
     counter-increment: grants;
     padding: 0em 0em 0em 0.5em;
+    text-align: left;
 }
 marker {
     padding-top: 0.5em;
@@ -122,6 +129,13 @@ div.series-end>span {
     background-clip: text;
     color: rgba(0,0,0,0);
     font-size: 1em;
+}
+@media only screen and (min-width: 1000px) {
+    footer#fredf {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
 }
 @media only screen and (min--moz-device-pixel-ratio: 1.0), (min-device-pixel-ratio: 1.0), (-webkit-min-device-pixel-ratio: 1.0) {
     #fred {
