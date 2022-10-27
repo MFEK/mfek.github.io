@@ -1,0 +1,3 @@
+[submodule "misc/4freedoms"]
+	path = misc/4freedoms
+	url = https://github.com/ctrlcctrlv/The-Four-Freedoms-of-Free-Software.svg
