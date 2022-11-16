@@ -9,25 +9,17 @@
 }
 
 @font-face {
-  font-family: Roboto Serif;
+  font-family: Besley;
   font-style: normal;
   font-display: swap;
-  font-variation-settings: 'opsz' 12;
-  font-stretch: condensed;
   src:
-  url('/blob/fonts/vf/RobotoSerif%5BGRAD,opsz,wdth,wght%5D.woff2') format('woff2'),
-  url('/blob/fonts/vf/RobotoSerif%5BGRAD,opsz,wdth,wght%5D.ttf') format('ttf'),
-  url('/blob/fonts/vf/RobotoSerif%5BGRAD,opsz,wdth,wght%5D.woff') format('woff');
+  url('/blob/fonts/vf/Besley%5Bwdth,wght%5D.woff2');
 }
 
 @font-face {
-  font-family: Roboto Serif;
+  font-family: Besley;
   font-style: italic;
   font-display: swap;
-  font-variation-settings: 'opsz' 12;
-  font-stretch: condensed;
   src: 
-  url('/blob/fonts/vf/RobotoSerif-Italic%5BGRAD,opsz,wdth,wght%5D.woff2') format('woff2'),
-  url('/blob/fonts/vf/RobotoSerif-Italic%5BGRAD,opsz,wdth,wght%5D.woff') format('woff'),
-  url('/blob/fonts/vf/RobotoSerif-Italic%5BGRAD,opsz,wdth,wght%5D.ttf') format('ttf');
+  url('/blob/fonts/vf/Besley-Italic%5Bwdth,wght%5D.woff2');
 }

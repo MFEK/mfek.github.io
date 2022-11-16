@@ -1,6 +1,7 @@
 body {
-    font-family: "Roboto Serif";
+    font-family: "Besley";
     font-variant-numeric: proportional-nums;
+    font-size: 1.10em;
 }
 .content {
     max-width:600px;
@@ -84,10 +85,17 @@ footer {
     font-size: x-small;
 }
 footer#fredf {
-    width: 150px;
+    text-align: justify;
+    text-justify: auto;
+    hyphens: auto;
+
+    width: 190px;
     border: 1px solid black;
     padding: 10px;
     float: right;
+}
+#fred {
+    margin: auto;
 }
 footer#lup {
     clear: both;

@@ -1,6 +1,6 @@
 body{
     background-color: rgb(34, 34, 37);
-    font-family: 'Roboto Serif', serif;;
+    font-family: 'Besley', serif;;
     margin:16px;
     font-size: 16px;
     line-height: 1.6em;
@@ -37,20 +37,11 @@ header > h1 {
 h1 {
     font-size: 3em;
 }
-h1 {
-    font-variation-settings: 'opsz' 72;
-}
-h2 {
-    font-variation-settings: 'opsz' 21;
-}
-h3 {
-    font-variation-settings: 'opsz' 16;
-}
 h1#modular-font-editor-k {
-    font-variation-settings: 'wdth' 900, 'opsz' 72;
+    font-variation-settings: 'wdth' 900;
 }
 #why > h2 {
-    font-variation-settings: 'wdth' 900, 'opsz' 21;
+    font-variation-settings: 'wdth' 900;
 }
 header > img {
     border:solid white 2px; 
@@ -149,7 +140,6 @@ code{
 
 footer {
     font-size: 8pt;
-    font-variation-settings: 'opsz' 8;
 }
 
 @media screen and (max-width: 700px){
