@@ -4,7 +4,7 @@ body {
     font-size: 1.10em;
 }
 .content {
-    max-width:600px;
+    max-width:666px;
     text-align: justify;
     text-justify: auto;
     hyphens: auto;
@@ -48,6 +48,32 @@ bounty::before {
     text-align: right;
     display: inline;
     content: 'ᵇ';
+}
+dagger::before {
+    content: "†";
+}
+li > dagger::after {
+    content: "\00a0";
+}
+dagger {
+    font-size: 0.666em;
+    font-style: normal;
+    vertical-align: top;
+}
+ul dagger {
+    display: table-cell;
+}
+ul.grant-notes span {
+    font-size: small;
+}
+ul.grant-notes li {
+    display: table-row;
+    counter-increment: auto;
+}
+ul.grant-notes {
+    display: initial;
+    padding-left: 6.66em;
+    font-style: italic;
 }
 strong, .strong {
     font-weight: bold;
