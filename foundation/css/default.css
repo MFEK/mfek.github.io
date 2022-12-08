@@ -75,6 +75,9 @@ ul.grant-notes {
     padding-left: 6.66em;
     font-style: italic;
 }
+ul.grant-notes em {
+    font-style: normal;
+}
 strong, .strong {
     font-weight: bold;
 }
