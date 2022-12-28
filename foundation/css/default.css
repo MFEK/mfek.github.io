@@ -3,7 +3,7 @@ body {
     font-variant-numeric: proportional-nums;
     font-size: 1.10em;
 }
-.content {
+p, .content {
     max-width:666px;
     text-align: justify;
     text-justify: auto;
@@ -77,6 +77,23 @@ ul.grant-notes {
 }
 ul.grant-notes em {
     font-style: normal;
+}
+ol .extended-comment {
+    position: relative;
+    line-height:0.9em;
+    max-width: 95%;
+    padding-left: 1em;
+    border-left: 1.2em solid black;
+}
+ol .extended-comment::before {
+    writing-mode: vertical-rl;
+    font-variation-settings: 'wdth' 50, 'wght' 600;
+    position: absolute;
+    left: -1em;
+    content: "  NOTE　︓";
+    font-size:0.97em;
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
 }
 strong, .strong {
     font-weight: bold;
