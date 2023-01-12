@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "css-has-pseudo": "^4.0.2",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0"
+  }
+}

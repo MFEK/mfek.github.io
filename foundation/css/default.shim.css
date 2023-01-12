@@ -1,0 +1,213 @@
+body {
+    font-family: "Besley";
+    font-variant-numeric: proportional-nums;
+    font-size: 1.10em;
+}
+p, .content {
+    max-width:666px;
+    text-align: justify;
+    text-justify: auto;
+    hyphens: auto;
+}
+ol {
+    list-style: none;
+    counter-reset: grants 0;
+}
+ol li {
+    counter-increment: grants;
+    padding: 0em 0em 0em 0.5em;
+    text-align: left;
+}
+marker {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    grid-column: 2;
+    display: inline;
+}
+marker::before {
+    content: counter(grants);
+}
+marker::after {
+    content: ')';
+}
+.TBD {
+    color: maroon;
+}
+.TBD::after {
+    content: '+)';
+    color: maroon;
+}
+.li_inner {
+}
+bounty {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    grid-column: 1;
+}
+bounty::before {
+    text-align: right;
+    display: inline;
+    content: 'ᵇ';
+}
+dagger::before {
+    content: "†";
+}
+li > dagger::after {
+    content: "\00a0";
+}
+dagger {
+    font-size: 0.666em;
+    font-style: normal;
+    vertical-align: top;
+}
+ul dagger {
+    display: table-cell;
+}
+p:has(small > dagger).extended-comment{
+    text-indent: -0.35em;
+}
+p:has(small > dagger).extended-comment::before{
+    text-indent: initial;
+}
+ul.grant-notes span {
+    font-size: small;
+}
+ul.grant-notes li {
+    display: table-row;
+    line-height: 1em;
+    counter-increment: auto;
+}
+ul.grant-notes {
+    display: initial;
+    padding-left: 6.66em;
+    font-style: italic;
+}
+ul.grant-notes em {
+    font-style: normal;
+}
+ol .extended-comment {
+    position: relative;
+    line-height:1em;
+    max-width: 95%;
+    padding-left: 1em;
+    border-left: 1.2em solid black;
+    min-height: 88px;
+}
+ol .extended-comment::before {
+    writing-mode: vertical-rl;
+    font-variation-settings: 'wdth' 50, 'wght' 600;
+    position: absolute;
+    left: -1em;
+    content: "  NOTE　︓";
+    font-size:0.97em;
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
+}
+strong, .strong {
+    font-weight: bold;
+}
+sc, .sc {
+    font-variant: small-caps;
+}
+.whereas {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+numero::before {
+    content: "№ ";
+}
+char::before {
+    content: "｢ ";
+}
+char::after {
+    content: " ｣";
+}
+char::before, char::after {
+    color: #aaa;
+}
+bux {
+    font-size: 0.8em;
+    color: ForestGreen;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+h1, h2, h3, h4, h5, bux {
+    font-variation-settings: 'wdth' 140;
+}
+footer {
+    font-size: x-small;
+}
+footer#fredf {
+    text-align: justify;
+    text-justify: auto;
+    hyphens: auto;
+
+    width: 190px;
+    border: 1px solid black;
+    padding: 10px;
+    float: right;
+}
+#fred {
+    margin: auto;
+}
+footer#lup {
+    clear: both;
+}
+ol.spaced_out > li {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+ol.spaced_out {
+    display: grid;
+    grid-template-columns: min-content min-content 1fr;
+}
+
+ol.spaced_out > li {
+    grid-column: 3;
+}
+ol > li::before {
+    min-width: 2em;
+    padding-right: 1em;
+}
+ol.spaced_out > li::before {
+}
+.li_inner {
+}
+div.series-end {
+    max-width: 500px;
+    margin-left: 0;
+    border-bottom: 1.5em solid black;
+    display:flex;
+    flex-direction: column;
+}
+div.series-end>span {
+    letter-spacing: .9rem;
+    position: relative;
+    top:1.3333em;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);
+    flex-basis: content;
+    background-clip: text;
+    color: rgba(0,0,0,0);
+    font-size: 1em;
+}
+@media only screen and (min-width: 1000px) {
+    footer#fredf {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.0), (min-device-pixel-ratio: 1.0), (-webkit-min-device-pixel-ratio: 1.0) {
+    #fred {
+        background: url('../media/fred💸.webp');
+        background-size: cover;
+    }
+}
+@media only screen and (max--moz-device-pixel-ratio: 1.0), (max-device-pixel-ratio: 1.0), (-webkit-max-device-pixel-ratio: 1.0) {
+    #fred {
+        background: url('../media/fred💸150.webp');
+        background-size: cover;
+    }
+}
