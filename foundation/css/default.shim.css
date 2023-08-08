@@ -18,16 +18,16 @@ ol li {
     padding: 0em 0em 0em 0.5em;
     text-align: left;
 }
-marker {
+.tag-marker {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     grid-column: 2;
     display: inline;
 }
-marker::before {
+.tag-marker::before {
     content: counter(grants);
 }
-marker::after {
+.tag-marker::after {
     content: ')';
 }
 .TBD {
@@ -39,34 +39,34 @@ marker::after {
 }
 .li_inner {
 }
-bounty {
+.tag-bounty {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     grid-column: 1;
 }
-bounty::before {
+.tag-bounty::before {
     text-align: right;
     display: inline;
     content: 'ᵇ';
 }
-dagger::before {
+.tag-dagger::before {
     content: "†";
 }
-li > dagger::after {
+li > .tag-dagger::after {
     content: "\00a0";
 }
-dagger {
+.tag-dagger {
     font-size: 0.666em;
     font-style: normal;
     vertical-align: top;
 }
-ul dagger {
+ul .tag-dagger {
     display: table-cell;
 }
-p:has(small > dagger).extended-comment{
+p:has(small > .tag-dagger).extended-comment{
     text-indent: -0.35em;
 }
-p:has(small > dagger).extended-comment::before{
+p:has(small > .tag-dagger).extended-comment::before{
     text-indent: initial;
 }
 ul.grant-notes span {
@@ -98,7 +98,7 @@ ol .extended-comment::before {
     font-variation-settings: 'wdth' 50, 'wght' 600;
     position: absolute;
     left: -1em;
-    content: "  NOTE　︓";
+    content: "  NOTE　—";
     font-size:0.97em;
     font-style: italic;
     color: rgba(255,255,255,0.8);
@@ -106,33 +106,33 @@ ol .extended-comment::before {
 strong, .strong {
     font-weight: bold;
 }
-sc, .sc {
+.tag-sc, .sc {
     font-variant: small-caps;
 }
 .whereas {
     font-variant: small-caps;
     font-weight: bold;
 }
-numero::before {
+.tag-numero::before {
     content: "№ ";
 }
-char::before {
+.tag-char::before {
     content: "｢ ";
 }
-char::after {
+.tag-char::after {
     content: " ｣";
 }
-char::before, char::after {
+.tag-char::before, .tag-char::after {
     color: #aaa;
 }
-bux {
+.tag-bux {
     font-size: 0.8em;
     color: ForestGreen;
     font-weight: bold;
     padding-left: 1em;
     padding-right: 1em;
 }
-h1, h2, h3, h4, h5, bux {
+h1, h2, h3, h4, h5, .tag-bux {
     font-variation-settings: 'wdth' 140;
 }
 footer {
@@ -143,13 +143,25 @@ footer#fredf {
     text-justify: auto;
     hyphens: auto;
 
-    width: 190px;
+    width: 350px;
     border: 1px solid black;
-    padding: 10px;
+    margin: 10px;
     float: right;
 }
-#fred {
+footer#fredf>p {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+img.fred {
+    padding: 10px;
+}
+footer .artcredit {
+    text-align: right;
+    float: right;
+}
+footer .fred {
     margin: auto;
+    width: 350px;
 }
 footer#lup {
     clear: both;
@@ -189,25 +201,13 @@ div.series-end>span {
     background-color: rgba(255,255,255,0.8);
     flex-basis: content;
     background-clip: text;
-    color: rgba(0,0,0,0);
+    color: rgba(0,0,0,0.5);
     font-size: 1em;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     footer#fredf {
         position: absolute;
         right: 0px;
         top: 0px;
-    }
-}
-@media only screen and (min--moz-device-pixel-ratio: 1.0), (min-device-pixel-ratio: 1.0), (-webkit-min-device-pixel-ratio: 1.0) {
-    #fred {
-        background: url('../media/fred💸.webp');
-        background-size: cover;
-    }
-}
-@media only screen and (max--moz-device-pixel-ratio: 1.0), (max-device-pixel-ratio: 1.0), (-webkit-max-device-pixel-ratio: 1.0) {
-    #fred {
-        background: url('../media/fred💸150.webp');
-        background-size: cover;
     }
 }
