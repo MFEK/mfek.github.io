@@ -28,3 +28,10 @@
     font-family: "TT2020 Style F";
     src: url("https://mfek.org/blob/fonts/TT2020StyleF-Regular-ASCII.woff2") format("woff2"),
 }
+
+/* Warning: subsetted font! */
+@font-face {
+    font-family: "Noto Serif CJK JP☺";
+    src: url("/blob/fonts/subset/NotoSerifCJKjp.woff2") format("woff2"),
+         url("/blob/fonts/subset/NotoSerifCJKjp.otf") format("otf"),
+}

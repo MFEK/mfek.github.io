@@ -231,3 +231,7 @@ div.series-end>span {
 ruby rt {
     font-size: 0.8em;
 }
+
+[lang="ja"], [lang="JA"] {
+    font-family: "Noto Serif CJK JP☺";
+}
