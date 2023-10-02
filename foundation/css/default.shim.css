@@ -224,6 +224,10 @@ div.series-end>span {
     }
 }
 
+.rightfloat {
+    float: right;
+}
+
 ruby rt {
     font-size: 0.8em;
 }
