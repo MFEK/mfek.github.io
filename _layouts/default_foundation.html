@@ -1,23 +1,18 @@
+<?xml version="1.0"?>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>{%- if page.title -%}{{page.title}} | {%- endif -%}{{site.title}}</title>
-    {% include foundation_head.html %}
-  </head>
-  <body>
-    <div class="content">
-    {{content}}
-    </div>
-    <div style="height:500px"></div>
-    {%- if page.no_fred == null -%}
-      {% include footer_fred.html %}
-    {%- endif -%}
-    {%- if page.no_lup == null -%}
-      <footer id="lup">
-        <p>Last updated: <span id="last-modified"></span></p>
-      </footer>
-    {%- endif -%}
-    {% include github-jekyll-last-modified.html site=site page=page %}
-    {% include has-shim.html %}
-  </body>
-</html>
+<HTML LANG="en" XMLNS="http://www.w3.org/1999/xhtml" XML:LANG="en">
+  <HEAD>
+    <META CHARSET="utf-8" />
+    <TITLE>{%- if page.title -%}{{page.title}} | {%- endif -%}{{site.title}}</TITLE>
+    <STYLE TYPE="text/css" XML:SPACE="preserve">
+        div.c1 {height:500px}
+    </STYLE>
+  </HEAD>
+  <BODY>{% include foundation_head.html %} 
+  <DIV CLASS="content">{{content}}</DIV>
+  <DIV CLASS="c1"></DIV>{%- if page.no_fred == null -%} {% include footer_fred.html %} {%- endif -%} {%- if page.no_lup == null -%} 
+  <FOOTER ID="lup">
+    <P>Last updated: 
+    <SPAN ID="last-modified"></SPAN></P>
+  </FOOTER>{%- endif -%} {% include github-jekyll-last-modified.html site=site page=page %} {% include has-shim.html %}</BODY>
+</HTML>

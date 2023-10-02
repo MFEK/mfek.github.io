@@ -2,6 +2,8 @@ body {
     font-family: "Besley";
     font-variant-numeric: proportional-nums;
     font-size: 1.10em;
+    width: 100%;
+    overflow-x: hidden;
 }
 p, .content {
     max-width:666px;
@@ -99,9 +101,23 @@ ol .extended-comment::before {
     position: absolute;
     left: -1em;
     content: "  NOTE　—";
+    height: 100em;
     font-size:0.97em;
     font-style: italic;
     color: rgba(255,255,255,0.8);
+}
+.advisory::before {
+    content: "ADVISORY FROM THE BOARD —" !important;
+}
+REDACTED {
+    font-weight: bold;
+    font-family: "TT2020 Style F";
+    font-size: 2em;
+    color: maroon;
+}
+REDACTED::after {
+    content: '[REDACTED]';
+    color: maroon;
 }
 strong, .strong {
     font-weight: bold;
@@ -182,10 +198,6 @@ ol > li::before {
     min-width: 2em;
     padding-right: 1em;
 }
-ol.spaced_out > li::before {
-}
-.li_inner {
-}
 div.series-end {
     max-width: 500px;
     margin-left: 0;
@@ -210,4 +222,8 @@ div.series-end>span {
         right: 0px;
         top: 0px;
     }
+}
+
+ruby rt {
+    font-size: 0.8em;
 }
