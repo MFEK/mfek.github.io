@@ -31,8 +31,3 @@
   url('https://mfek.org/blob/fonts/vf/RobotoSerif-Italic[GRAD,opsz,wdth,wght].woff') format('woff'),
   url('https://mfek.org/blob/fonts/vf/RobotoSerif-Italic[GRAD,opsz,wdth,wght].ttf') format('ttf');
 }
-
-@font-face {
-    font-family: "TT2020 Style F";
-    src: url("https://mfek.org/blob/fonts/TT2020StyleF-Regular-ASCII.woff2") format("woff2"),
-}
