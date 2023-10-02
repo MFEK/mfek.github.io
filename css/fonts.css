@@ -31,6 +31,13 @@
 
 /* Warning: subsetted font! */
 @font-face {
+    font-family: "REDACTED";
+    src: url("/blob/fonts/subset/TT2020StyleF-Regular-ASCII.woff2") format("woff2"),
+         url("/blob/fonts/subset/TT2020StyleF-Regular-ASCII.ttf") format("ttf"),
+}
+
+/* Warning: subsetted font! */
+@font-face {
     font-family: "Noto Serif CJK JP☺";
     src: url("/blob/fonts/subset/NotoSerifCJKjp.woff2") format("woff2"),
          url("/blob/fonts/subset/NotoSerifCJKjp.otf") format("otf"),
