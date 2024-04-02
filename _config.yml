@@ -40,6 +40,10 @@ defaults:
     values:
       bid_invite: 1
 
+# Explicitly include .well-known directory
+include:
+  - .well-known/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
